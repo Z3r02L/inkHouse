@@ -1,185 +1,229 @@
 body {
-  margin: 0;
-  font-family: "Raleway", sans-serif;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .wrapper {
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: flex-start;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: flex-start;
 }
 
 .header {
-  display: flex;
-  justify-content: start;
-  height: 100px;
-  background-color: #e1ede6;
-  margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    height: 100px;
+    background-color: #e1ede6;
+    margin: 0 auto;
 }
 
 .header__logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding-top: 33px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 33px;
 }
 
 .header__logo img {
-  width: 35px;
-  height: 35px;
+    width: 35px;
+    height: 35px;
 }
 
 .header__logo span {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.17;
-  color: #598d66;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.17;
+    color: #598d66;
 }
 
 .header__nav {
-  margin-left: 500px;
-  margin-top: 38px;
+    margin-left: 500px;
+    margin-top: 38px;
 }
 
 .header__nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 60px;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 60px;
+    align-items: center;
 }
 
 .header__nav a {
-  text-decoration: none;
-  color: #2c2d35;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.17;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #2c2d35;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.17;
+    transition: color 0.2s ease;
 }
 
 .header__nav a:hover {
-  color: #598d66;
+    color: #598d66;
 }
 
 .header__cart-item img {
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 .hero {
-  max-height: 620px;
-  max-width: 1440px;
-  margin: 0 auto;
+    height: 700px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #e1ede6;
+}
+
+.hero .wrapper {
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero-content {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 145px;
-  margin-left: 30px;
-  max-width: 540px;
-  max-height: 331px;
-  text-align: left; 
-  color: #2C2D35; 
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    text-align: left;
+    color: #2c2d35;
 }
 
 .hero-content span {
-  color: #598d66;
+    color: #598d66;
 }
 
 .hero h1 {
-  font-size: 60px;
-  font-family: Raleway, sans-serif;
-  font-weight: 500;
-  line-height: 1.1em;
-  color: #2C2D35; 
-  margin-bottom: 20px;
+    font-size: 45px;
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+    line-height: 1.1em;
+    color: #2c2d35;
+    margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 18px;
-  font-family: Raleway, sans-serif;
-  font-weight: 500;
-  line-height: 1.5em;
-  color: #86928B; 
-  margin-bottom: 20px;
+    font-size: 18px;
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #86928b;
+    margin-bottom: 60px;
 }
 
 .primary-btn {
-  max-width: 227px;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  color: #598D66;
-  padding: 20px 60px;
-  text-decoration: none;
-  border: 1px solid #598D66; 
-  font-size: 20px;
-  font-family: Raleway, sans-serif;
-  font-weight: 500;
-  height: 65px; 
-  box-sizing: border-box; 
+    width: 227px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #598d66;
+    padding: 20px 60px;
+    text-decoration: none;
+    border: 1px solid #598d66;
+    font-size: 20px;
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+    height: 65px;
+    box-sizing: border-box;
 }
 
 .catalog-title {
-  display: flex;
-  justify-content: start;
+    display: flex;
+    justify-content: start;
 }
 
 .catalog-items {
-
 }
 
 .catalog-item {
-  max-width: 350px;
-  max-height: 730px;
-  background-color: #598D66;
+    max-width: 350px;
+    max-height: 730px;
+    background-color: #598d66;
 }
 
 .filter {
-  margin-left: 418px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+    margin-left: 418px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .promo {
-  background-image: url(../images/pic_background.jpg) cover;
-  height: 574px;
+    background-image: url(../images/pic_background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .promo .container {
-  display: flex;
-  flex-direction: column;
-  max-width: 540px;
-  color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    color: #f4f6f5;
+    padding: 100px 0;
+    box-sizing: border-box;
+    align-items: flex-start;
 }
 
 .promo-title {
-  display: flex;
-  justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 25px;
 }
 
-.promo p {
-  text-decoration: none;
-  font-size: 40px;
-  color: #f4f6f5;
+.promo-title p {
+    text-decoration: none;
+    font-size: 40px;
+    color: #f4f6f5;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.promo-descr {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #f4f6f5;
+    margin-bottom: 50px;
+    max-width: 540px;
+    font-weight: 500;
+}
+
+.promo button {
+    background-color: #f4f6f5;
+    color: #2c2d35;
+    padding: 20px 60px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.17;
+    height: 65px;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+    width: 227px;
+}
+
+.promo button:hover {
+    background-color: #e1ede6;
 }
 
 .footer {
-  background-color: red;
+    background-color: red;
 }
 
 .footer-nav {
-  display: flex;
-  justify-content: start;
+    display: flex;
+    justify-content: start;
 }
