@@ -100,7 +100,6 @@ body {
     font-weight: 500;
     line-height: 1.1em;
     color: #2c2d35;
-    margin-bottom: 20px;
 }
 
 .hero p {
@@ -109,73 +108,80 @@ body {
     font-weight: 500;
     line-height: 1.5em;
     color: #86928b;
-    margin-bottom: 20px;
+}
+
+.hero-btn {
+    margin-top: 60px;
+    border: 1px solid #598d66;
+    padding: 20px 60px;
+    width: 227px;
+    height: 65px;
+    font-size: 20px;
+    color: #598d66;
+    background-color: #fff;
+    cursor: pointer;
 }
 
 .promo {
-    background: url(../images/pic_background.jpg) center / cover no-repeat;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background: url('../images/pic_background.jpg') center/cover no-repeat;
 }
 
-.promo .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 540px;
-    color: #f4f6f5;
-    padding: 100px 0;
-    box-sizing: border-box;
-    align-items: flex-start;
+.promo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pic_background.jpg') center/cover no-repeat;
+    z-index: -1;
 }
 
-.promo-wrapper {
+.promo-content {
     display: flex;
     flex-direction: column;
-    margin-left: 0;
+    max-width: 630px;
 }
+
 .promo-title {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
-    margin-bottom: 25px;
+    justify-content: start;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    color: white;
 }
 
-.promo-title p {
-    text-decoration: none;
+.promo-title img {
+    width: 80px;
+}
+
+.promo-title span {
+    margin-left: 26px;
+    font-weight: normal;
     font-size: 40px;
+    line-height: 1;
     color: #f4f6f5;
-    font-weight: 700;
-    line-height: 1.1;
 }
 
 .promo-descr {
+    margin-top: 25px;
     font-size: 18px;
     line-height: 1.5;
-    color: #f4f6f5;
-    margin-bottom: 50px;
-    max-width: 540px;
-    font-weight: 500;
+    color: #fff;
 }
 
-.promo button {
-    background-color: #f4f6f5;
-    color: #2c2d35;
-    padding: 20px 60px;
-    border: none;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.17;
+.promo-btn {
+    margin-top: 60px;
+    width: 257px;
     height: 65px;
+    background: #eedb6d;
+    font-size: 20px;
+    color: #2c2d35;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    width: 227px;
-}
-
-.promo button:hover {
-    background-color: #e1ede6;
 }
 
 /* Catalog Section */
@@ -187,7 +193,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
 }
 
 .catalog__filter button {
@@ -211,6 +216,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 20px;
 }
 
 .catalog__item {
@@ -222,28 +228,25 @@ body {
     width: 100%;
     height: 350px;
     object-fit: cover;
-    margin-bottom: 20px;
 }
 
 .catalog__item h3 {
     font-size: 24px;
     color: #2c2d35;
-    margin-bottom: 10px;
 }
 
 .catalog__item p {
     color: #86928b;
-    margin-bottom: 10px;
 }
 
 .catalog__item span {
     display: block;
     font-size: 24px;
     color: #598d66;
-    margin-bottom: 20px;
 }
 
 .catalog__item button {
+    margin-top: 20px;
     width: 100%;
     padding: 15px;
     background: none;
