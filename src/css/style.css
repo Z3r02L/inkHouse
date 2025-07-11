@@ -4,14 +4,20 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: start;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
 }
 
+.wrapper {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: flex-start;
+}
+
 .header {
+  display: flex;
+  justify-content: start;
   height: 100px;
   background-color: #e1ede6;
   margin: 0 auto;
@@ -69,16 +75,18 @@ body {
 }
 
 .hero {
-  height: 620px;
-  width: 1440px;
+  max-height: 620px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .hero-content {
+  display: flex;
+  justify-content: flex-start;
   margin-top: 145px;
   margin-left: 30px;
-  width: 540px;
-  height: 331px;
+  max-width: 540px;
+  max-height: 331px;
   text-align: left; 
   color: #2C2D35; 
 }
@@ -127,6 +135,16 @@ body {
   justify-content: start;
 }
 
+.catalog-items {
+
+}
+
+.catalog-item {
+  max-width: 350px;
+  max-height: 730px;
+  background-color: #598D66;
+}
+
 .filter {
   margin-left: 418px;
   display: flex;
@@ -135,7 +153,7 @@ body {
 }
 
 .promo {
-  background-image: url(../images/pic_background.jpg);
+  background-image: url(../images/pic_background.jpg) cover;
   height: 574px;
 }
 
@@ -155,4 +173,13 @@ body {
   text-decoration: none;
   font-size: 40px;
   color: #f4f6f5;
+}
+
+.footer {
+  background-color: red;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: start;
 }
