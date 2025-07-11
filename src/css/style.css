@@ -220,13 +220,15 @@ body {
 }
 
 .catalog__item {
+    max-width: 350px;
+    max-height: 730px;
     background: #f4f6f5;
     padding: 20px;
 }
 
 .catalog__item img {
-    width: 100%;
-    height: 350px;
+    margin: 0 auto;
+    max-width: 310px;
     object-fit: cover;
 }
 
