@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  --font-family-general: "Raleway", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header {
+  display: flex;
+  justify-content: start;
+  height: 100px;
+  background-color: #e1ede6;
+  margin: 0 auto;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 33px;
+}
+
+.header__logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.header__logo span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.17;
+  color: #598d66;
+}
+
+.header__nav {
+  margin-left: 500px;
+  margin-top: 38px;
+}
+
+.header__nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 60px;
+  align-items: center;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: #2c2d35;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.17;
+  transition: color 0.2s ease;
+}
+
+.header__nav a:hover {
+  color: #598d66;
+}
+
+.header__cart-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.hero {
+  max-height: 620px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 145px;
+  margin-left: 30px;
+  max-width: 540px;
+  max-height: 331px;
+  text-align: left;
+  color: #2c2d35;
+}
+
+.hero-content span {
+  color: #598d66;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  line-height: 1.1em;
+  color: #2c2d35;
+}
+
+.hero p {
+  font-size: 18px;
+  font-family: Raleway, sans-serif;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: #86928b;
+}
+
+.hero-btn {
+  margin-top: 60px;
+  border: 1px solid #598d66;
+  padding: 20px 60px;
+  width: 227px;
+  height: 65px;
+  font-size: 20px;
+  color: #598d66;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.promo {
+  margin-top: 70px;
+  height: 574px;
+  position: relative;
+  background: url("../images/pic_background.jpg") center / cover no-repeat;
+}
+
+.promo-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+}
+
+.promo-title {
+  margin-top: 70px;
+  display: flex;
+  justify-content: start;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: white;
+}
+
+.promo-title img {
+  width: 80px;
+}
+
+.promo-title span {
+  margin-left: 26px;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 1;
+  color: #f4f6f5;
+}
+
+.promo-descr {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.promo-btn {
+  margin-top: 60px;
+  width: 257px;
+  height: 65px;
+  background: #eedb6d;
+  font-size: 20px;
+  color: #2c2d35;
+  border: none;
+  cursor: pointer;
+}
+
+/* Catalog Section */
+.catalog {
+  margin-top: 70px;
+}
+
+.catalog__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog__filter button {
+  background: none;
+  border: 1px solid #598d66;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-left: 20px;
+  color: #598d66;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.catalog__filter button:hover {
+  background-color: #598d66;
+  color: white;
+}
+
+.catalog__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.catalog__item {
+  max-width: 350px;
+  max-height: 730px;
+  background: #f4f6f5;
+  padding: 20px;
+}
+
+.catalog__item img {
+  margin: 0 auto;
+  max-width: 310px;
+  object-fit: cover;
+}
+
+.catalog__item h3 {
+  font-size: 24px;
+  color: #2c2d35;
+}
+
+.catalog__item p {
+  color: #86928b;
+}
+
+.catalog__item span {
+  display: block;
+  font-size: 24px;
+  color: #598d66;
+}
+
+.catalog__item button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  background: none;
+  border: 1px solid #598d66;
+  color: #598d66;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.catalog__item button:hover {
+  background: #598d66;
+  color: white;
+}
+
+.team {
+  margin-top: 12px;
+}
+
+.team-content {
+  margin-top: 124px;
+  margin-left: 30px;
+}
+.footer {
+  background-color: red;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: start;
+}

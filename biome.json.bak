@@ -1,0 +1,84 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "vue/noUnusedComponents": "warn",
+        "vue/noUnusedRefs": "warn"
+      },
+      "style": {
+        "useBlockStatements": "off",
+        "useShorthandAssign": "off",
+        "noParameterAssign": "off",
+        "vue/componentApiStyle": ["error", ["composition"]]
+      },
+      "suspicious": {
+        "noExplicitAny": "warn"
+      },
+      "vue": {
+        "useVModelWithArgument": "error",
+        "noDeprecatedVIs": "error",
+        "noRestrictedHtmlElements": "error"
+      },
+      "a11y": {
+        "recommended": true,
+        "ariaUnsupportedElements": "error",
+        "mouseEventsHaveKeyEvents": "error"
+      },
+      "nursery": {
+        "useExhaustiveDependencies": "warn"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "ignore": ["**/dist/**"],
+    "attributePosition": "auto"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "trailingComma": "all",
+      "bracketSpacing": true,
+      "bracketSameLine": false,
+      "proseWrap": "always"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": false
+    },
+    "organizeImports": {
+      "enabled": true
+    }
+  },
+  "typescript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "trailingComma": "all",
+      "bracketSpacing": true,
+      "bracketSameLine": false
+    }
+  },
+  "files": {
+    "ignore": ["node_modules", "dist", "*.d.ts", "*.generated.ts"],
+    "include": ["**/*.{js,jsx,ts,tsx,vue}"]
+  },
+  "vcs": {
+    "enabled": true,
+    "client": "git",
+    "useIgnoreFile": true,
+    "rootDir": "."
+  }
+}
