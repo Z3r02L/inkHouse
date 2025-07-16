@@ -4,7 +4,6 @@ import ProductCard from './ProductCard.vue';
 import { products } from '../data/products-data';
 
 const activeFilter = ref('franc'); // Текущий фильтр
-
 </script>
 
 <template>
@@ -28,7 +27,6 @@ const activeFilter = ref('franc'); // Текущий фильтр
           :title="product.title"
           :tech="product.tech"
           :price="product.price"
-          @add-to-cart="handleAddToCart(product)"
         />
       </div>
     </div>
