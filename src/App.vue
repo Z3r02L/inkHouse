@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { StagewiseToolbar } from '@stagewise/toolbar-vue';
 // import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue';
 import Hero from './components/Hero.vue';
@@ -10,11 +11,9 @@ import Footer from './components/Footer.vue';
 
 <template>
   <Header/>
-  <Hero/>
-  <Catalog/>
-  <Promo/>
-  <Team/>
+  <router-view />
   <Footer/>
+  <StagewiseToolbar />
 </template>
 
 <style scoped>

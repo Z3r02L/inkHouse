@@ -5,7 +5,9 @@
     </div>
     <div class="product-details">
       <p class="product-author">{{ author }}</p>
-      <p class="product-title">{{ title }}</p>
+      <router-link :to="{ name: 'ProductDetail', params: { id: id } }">
+        <p class="product-title">{{ title }}</p>
+      </router-link>
       <p class="product-category">{{ tech }}</p>
       <p class="product-price">{{ price }} руб</p>
       <button class="add-to-cart-btn">В корзину</button>
@@ -15,10 +17,18 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { RouterLink } from 'vue-router';
 
 export default defineComponent({
   name: 'ProductCard',
+  components: {
+    RouterLink,
+  },
   props: {
+    id: {
+      type: Number,
+      required: true,
+    },
     image: {
       type: String,
       required: true,

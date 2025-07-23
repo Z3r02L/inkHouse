@@ -1,9 +1,25 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import ProductCard from './ProductCard.vue';
 import { products } from '../data/products-data';
 
-const activeFilter = ref('franc'); // Текущий фильтр
+const activeFilter = ref('franc');
+const searchQuery = ref('');
+const tempSearch = ref('');
+
+const filteredProducts = computed(() => {
+  return products.filter(product => {
+    const matchesFilter = product.filter === activeFilter.value;
+    const matchesSearch = searchQuery.value === '' ||
+      product.author.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+      product.title.toLowerCase().includes(searchQuery.value.toLowerCase());
+    return matchesFilter && matchesSearch;
+  });
+});
+
+function applySearchFilter() {
+  searchQuery.value = tempSearch.value.trim();
+}
 </script>
 
 <template>
@@ -16,11 +32,15 @@ const activeFilter = ref('franc'); // Текущий фильтр
           <button :class="{ active: activeFilter === 'germany' }" @click="activeFilter = 'germany'">Германия</button>
           <button :class="{ active: activeFilter === 'erland' }" @click="activeFilter = 'erland'">Англия</button>
         </div>
+        <div class="catalog__search">
+          <input type="text" v-model="tempSearch" @keyup.enter="applySearchFilter" placeholder="Поиск по названию или автору">
+        </div>
       </div>
       <div class="catalog__items">
         <ProductCard
-          v-for="product in products.filter(i => i.filter === activeFilter)"
+          v-for="product in filteredProducts"
           :key="product.id"
+          :id="product.id"
           :filter="product.filter"
           :image="product.image"
           :author="product.author"
@@ -43,6 +63,20 @@ const activeFilter = ref('franc'); // Текущий фильтр
     font-size: 40px;
     justify-content: space-between;
     align-items: center;
+}
+
+.catalog__search input {
+    border: 1px solid var(--color-green-primary);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 300px;
+    margin-left: 20px;
+    outline: none;
+}
+
+.catalog__search input:focus {
+    border-color: var(--color-green-dark);
 }
 
 .catalog__filter button {

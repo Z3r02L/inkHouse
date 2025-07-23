@@ -8,6 +8,7 @@ export interface Product {
   title: string;
   tech: string;
   price: number;
+  description?: string;
 }
 
 export const products: Product[] = [
