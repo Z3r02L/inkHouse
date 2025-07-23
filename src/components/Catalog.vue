@@ -9,7 +9,7 @@ const tempSearch = ref('');
 
 const filteredProducts = computed(() => {
   return products.filter(product => {
-    const matchesFilter = product.filter === activeFilter.value;
+    const matchesFilter = activeFilter.value === '' || product.filter === activeFilter.value;
     const matchesSearch = searchQuery.value === '' ||
       product.author.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
       product.title.toLowerCase().includes(searchQuery.value.toLowerCase());
@@ -19,6 +19,7 @@ const filteredProducts = computed(() => {
 
 function applySearchFilter() {
   searchQuery.value = tempSearch.value.trim();
+  activeFilter.value = '';
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="product-detail">
     <div class="container">
-      <button @click="$router.back()" class="back-button">Назад</button>
+      <button @click="$router.back()" class="button-green">Назад</button>
 
       <div class="product-detail__content" v-if="product">
         <div class="product-detail__image">
@@ -17,11 +17,11 @@
             <span class="price">{{ product.price }} руб</span>
           </div>
 
-          <button class="btn btn--primary">В корзину</button>
+          <button class="button-green">В корзину</button>
 
           <div class="product-detail__description">
             <h3>Описание</h3>
-            <p>{{ product.description || 'Описание товара скоро будет добавлено.' }}</p>
+            <p>{{ product.description || 'супер-мега картина' }}</p>
           </div>
         </div>
       </div>
@@ -49,20 +49,6 @@
 <style scoped>
   .product-detail {
     padding: 40px 0;
-  }
-
-  .back-button {
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-
-  .back-button:hover {
-    color: #007bff;
   }
 
   .product-detail__content {
@@ -111,15 +97,6 @@
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-  }
-
-  .btn--primary {
-    background-color: #007bff;
-    color: white;
-  }
-
-  .btn--primary:hover {
-    background-color: #0056b3;
   }
 
   .product-detail__description {
